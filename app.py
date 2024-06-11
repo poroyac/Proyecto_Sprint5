@@ -6,9 +6,9 @@ car_data = pd.read_csv('vehicles_us.csv') #leer los datos
 
 st.header('Dashboard de Vehiculos')
 
-hist_button = st.button('Construir un histograma') #crear un botón
+build_histogram = st.checkbox('Construir un histograma') #crear checkbox de histograma
 
-if hist_button: #al hacer clic en el botón
+if build_histogram: #al hacer clic en el botón
     #escribir mensaje
     st.write('Histograma de Vehiculos de anuncios de venta de coches.')
     
@@ -18,9 +18,9 @@ if hist_button: #al hacer clic en el botón
     #mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
 
-disp_button = st.button('Construir gráfico de dispersión')
+build_dispersion = st.checkbox('Construir gráfico de dispersión') #crear checkbox de dispersion
 
-if disp_button: #al hacer clic en el botón
+if build_dispersion: #al hacer clic en el botón
     #escribir mensaje
     st.write('Gráfico de dispersión de anuncios de venta de coches.')
     
